@@ -1,0 +1,38 @@
+<div class="container-fluid" style="padding:20px 0 10px 200px" id="form">
+  <h2 >Customize Employee List</h2>
+  <h6 style="color:silver;opacity:20%;float:left">AVAILABLE FIELDS</h6><h6 style="color:silver;opacity:20%;padding-left:505px">SELECTED FIELDS</h6>
+  <div class="container" id="availablefields">
+    
+    <div class="row"  dropDirective (dropEvent)="addDropItem1($event)" class="droppable" [dropHighlight]="'highlight'">
+      <h6 style="color:silver;opacity:20%;padding:10px 0">Personal</h6>
+      <div class="col-12">
+        <p  *ngFor="let item of itemsToDrop" [dragDirective]='item' [dragHightlight]="'highlight'" (releaseDrop)="releaseDrop($event)" class="dragItem">
+          <i class="fa fa-bars" aria-hidden="true" style="color:silver;opacity:10%"></i>
+          <span style="padding-left: 15px;font-weight:600;">{{item.name}}</span>
+          <i class="fa fa-plus-circle" aria-hidden="true" style="color: green;float:right;padding:4px 5px 0 0"></i>
+        </p>
+      </div>
+    </div>
+    <div class="row"  dropDirective (dropEvent)="addDropItem2($event)" class="droppable" [dropHighlight]="'highlight'">
+        <h6 style="color:silver;opacity:20%;padding:10px 0">Business</h6>
+        <div class="col-12">
+          <p  *ngFor="let item of itemsToDrop2" [dragDirective]='item' [dragHightlight]="'highlight'" (releaseDrop)="releaseDrop2($event)" class="dragItem">
+            <i class="fa fa-bars" aria-hidden="true" style="color:silver;opacity:10%"></i>
+            <span style="padding-left: 15px;font-weight:600">{{item.name}}</span>
+            <i class="fa fa-plus-circle" aria-hidden="true" style="color: green;float:right;padding:4px 5px 0 0"></i>
+          </p>
+        </div>
+      </div>
+  </div>
+  
+  
+  <div class="container" id="selectedfields">
+        <div dropDirective (dropEvent)="addDropItem($event)" class="droppable" style="height:100%" >
+          <p *ngFor="let item of itemsDropped" class="dropItem" [dragDirective]='item' [dragHightlight]="'highlight'" (releaseDrop)="releaseDrop1($event)" class="dragItem">
+              <i class="fa fa-bars" aria-hidden="true" style="color:silver;opacity:10%"></i> 
+              <span style="padding-left: 15px">{{item.name}}</span>
+              <i class="fa fa-minus-circle" aria-hidden="true" style="color: red;float:right;padding:4px 5px 0 0"></i>
+          </p>             
+        </div>    
+  </div>
+</div>

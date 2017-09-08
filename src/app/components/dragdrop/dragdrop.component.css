@@ -1,0 +1,55 @@
+p{
+    border:solid 1px grey;
+    padding: 5px 0 5px 10px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+#form{
+    background-color:whitesmoke;
+    height: 600px;
+    width:1340px;
+    overflow-x: hidden;
+}
+
+#availablefields{
+  background-color: white;
+  padding:10px;
+  margin-right:65px;
+  border:1px solid;
+  float:left;
+  width:440px;
+  height:400px;
+  border-style: outset;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#selectedfields{
+  background-color: white;
+  padding:10px;
+  border:1px solid;
+  float:left;
+  width:440px;
+  height:400px;
+  border-style: outset;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.droppable{
+  padding: 10px;
+  min-height:200px;
+}
+.highlight{
+	border:solid 1px #0d0;
+}
+.dropItem{
+  display:inline-block;
+  padding:2px 4px;
+  margin:4px;
+}
+
+h6{
+  font-family: "Times New Roman", Georgia, Serif;
+  font-weight: 100;
+}
